@@ -351,10 +351,10 @@ img {
 
   .home__social {
     display: flex;
-    flex-direction: row; /* ✅ QATOR BO‘LIB CHIQISHI UCHUN */
+    flex-direction: row; 
     justify-content: center;
     gap: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
 
   .home__data {
