@@ -805,7 +805,7 @@ img {
 
 .contact__input {
   width: 100%;
-  background-color: var(--input-color);
+  /* background-color: var(--input-color); */
   color: var(--text-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -994,7 +994,9 @@ img {
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
   }
-
+.contact__container {
+    row-gap: 2rem;
+  }
   .qualification__section {
     display: grid;
     grid-template-columns: 0.6fr;
@@ -1440,4 +1442,160 @@ html, body {
 .show-scroll {
   bottom: 5rem;
   opacity: 1;
+}
+
+
+
+
+
+
+/* ========== GLOBAL RESET ========== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ========== DARK THEME VARIABLES ========== */
+body.dark-theme {
+  --hue-color: 240;
+
+  /* Primary colors */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 30%, 12%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+
+  /* Text & backgrounds */
+  --title-color: #ffffff;
+  --text-color: #dcdcdc;
+  --text-color-light: #a9a9a9;
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: var(--body-color);
+  --input-color: #2c2c2c;
+
+  /* Scrollbar */
+  --scroll-bar-color: #2a2a2a;
+  --scroll-thumb-color: #444;
+}
+
+/* ========== DARK THEME BACKGROUNDS ========== */
+body.dark-theme,
+body.dark-theme .home,
+body.dark-theme .section,
+body.dark-theme .main,
+body.dark-theme .container {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+body.dark-theme .container,
+body.dark-theme .services__content,
+body.dark-theme .portfolio__content,
+body.dark-theme .contact__content,
+body.dark-theme .footer__bg {
+  background-color: var(--container-color);
+}
+
+/* ========== DARK THEME TEXT & BUTTONS ========== */
+body.dark-theme .nav__logo,
+body.dark-theme .nav__toggle,
+body.dark-theme .nav__link,
+body.dark-theme .home__title,
+body.dark-theme .home__subtitle,
+body.dark-theme .home__description,
+body.dark-theme .section__title,
+body.dark-theme .section__subtitle,
+body.dark-theme .qualification__title,
+body.dark-theme .qualification__subtitle,
+body.dark-theme .contact__label,
+body.dark-theme .footer__title,
+body.dark-theme .footer__subtitle,
+body.dark-theme .footer__link {
+  color: var(--title-color);
+}
+
+body.dark-theme .button {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+body.dark-theme .button--white {
+  background-color: #fff;
+  color: var(--first-color);
+}
+
+body.dark-theme .button--link {
+  color: var(--first-color-lighter);
+}
+
+/* ========== CONTAINER PADDING INSTEAD OF MARGIN ========== */
+.container {
+  max-width: 760px;
+  padding: 0 var(--mb-1-5);
+  margin: 0 auto;
+}
+
+/* ========== HOME BLOB IMAGE FIX ========== */
+.home__blob-img {
+  width: 100%;
+  height: auto;
+  padding-left: 0;
+}
+
+/* ========== MOBILE LAYOUT FOR HOME ========== */
+@media screen and (max-width: 767px) {
+  .home__content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    grid-template-columns: 1fr !important;
+  }
+
+  .home__data {
+    grid-column: 1 / -1 !important;
+    padding: 0 1rem;
+  }
+
+  .home__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+  }
+
+  .home__social-icon {
+    font-size: 1.2rem;
+  }
+}
+
+
+.contact__content input,
+.contact__content textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: var(--mb-1);
+  border: 1px solid var(--first-color);
+  border-radius: 0.5rem;      /* Yumaloq burchak */
+  /* background-color: var(--input-color); */
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contact__content input:focus,
+.contact__content textarea:focus {
+  border-color: var(--first-color-alt);
+}
+
+/* Agar placeholder rangini ham sozlamoqchi bo‘lsangiz */
+.contact__content input::placeholder,
+.contact__content textarea::placeholder {
+  color: var(--text-color-light);
 }
