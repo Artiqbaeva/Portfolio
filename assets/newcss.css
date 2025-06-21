@@ -340,6 +340,27 @@ img {
   font-size: 1.25rem;
 }
 
+@media screen and (max-width: 767px) {
+  .home__content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .home__social {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .home__data {
+    padding: 0 1rem;
+  }
+}
+
 /*================== Buttons ===================*/
 .button {
   display: inline-block;
