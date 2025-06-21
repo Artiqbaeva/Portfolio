@@ -350,7 +350,7 @@ img {
   }
 
   .home__social {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
     margin-top: 1.5rem;
