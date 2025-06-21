@@ -59,7 +59,7 @@
 /* Font Size for larger devices */
 @media screen and (min-width: 968px) {
   :root {
-    --big-font-size: 3rem;
+    --big-font-size: 2rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -152,7 +152,7 @@ img {
 }
 
 .container {
-  max-width: 768px;
+  max-width: 760px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -1161,5 +1161,42 @@ img {
 
   .button--white {
     bottom: -4.5rem;
+  }
+}
+
+
+
+
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 2. Container uchun margin emas, padding ishlatish */
+.container {
+  max-width: 760px;
+  padding-left: var(--mb-1-5);
+  padding-right: var(--mb-1-5);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 3. Rasm ortiqcha kenglikni oldini olish */
+.home__blob-img {
+  width: 100%;
+  height: auto;
+  padding-left: 0;
+}
+
+/* 4. Mobil ekranlar uchun grid moslashtirish */
+@media screen and (max-width: 767px) {
+  .home__content {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+
+  .home__data {
+    grid-column: 1 / -1;
   }
 }
